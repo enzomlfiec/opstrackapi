@@ -6,7 +6,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-    return "<h1>Bem vindo!</h1>"
+    return '\
+    <h1>Bem vindo!</h1>\
+    <a href="status">Status</a>\
+    <a href="tickets">Tickets</a>\
+    <a href="sobre">Sobre</a>\
+    '
 
 # Rota Raiz.
 
@@ -18,13 +23,29 @@ def status():
 
 @app.route('/tickets')
 def tickets():
-    return {'servico': 'OpsTrackAPI','status': 'online'}
+    return{
+    "id": "1",
+    "titulo": "Erro 404 ao acessar relatório de vendas",
+    "descricao": "Usuário reporta erro pagina não achada e erro HTTP 404 ao tentar exportar o relatório consolidado do mês anterior.",
+    "categoria": "3",
+    "prioridade": "Alta",
+    "status": "Aberto",
+    "criado_em": "2026-08-17T08:30:00Z",
+    "atualizado_em": "2026-08-17T08:32:00Z",
+    "solicitante": {
+      "nome": "Ana Silva",
+      "email": "ana.silva@empresa.com",
+      "departamento": "6"
+    },
+  }
 
 # Rota Raiz.
 
 @app.route('/sobre')
 def sobre():
-    return {'servico': 'OpsTrackAPI','status': 'online'}
+    return {
+        
+    }
 
 
 
