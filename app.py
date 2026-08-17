@@ -7,9 +7,9 @@ app = Flask(__name__)
 @app.route('/')
 def welcome():
     return '\
-    <h1>Bem vindo!</h1>\
-    <a href="status">Status</a>\
-    <a href="tickets">Tickets</a>\
+    <h1>Bem vindo!</h1><br>\
+    <a href="status">Status</a><br>\
+    <a href="tickets">Tickets</a><br>\
     <a href="sobre">Sobre</a>\
     '
 
@@ -43,9 +43,9 @@ def tickets():
 
 @app.route('/sobre')
 def sobre():
-    return {
-        "<h1>Bem vindo! esse é meu projeto opsec</h1>"
-    }
+    return """<h1>Bem vindo! esse é meu projeto API Opstrack!</h1><br>
+        <a href="/">Voltar ao portal.</a>
+        """
 
 
 
