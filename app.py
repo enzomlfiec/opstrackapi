@@ -44,7 +44,7 @@ def tickets():
 @app.route('/sobre')
 def sobre():
     return {
-        
+        "<h1>Bem vindo! esse é meu projeto opsec</h1>"
     }
 
 
